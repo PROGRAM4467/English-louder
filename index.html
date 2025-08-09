@@ -8,18 +8,20 @@
   <style>
     * {
       box-sizing: border-box;
+      scroll-behavior: smooth;
     }
     body {
       font-family: 'Poppins', sans-serif;
       margin: 0;
-      background-color: #E6F2FF;
+      background-color: #EEF2FF;
       color: #333;
     }
     header {
-      background-color: #B3D9FF;
+      background-color: #A3BFFA;
       padding: 15px 20px;
       display: flex;
       align-items: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
     header img {
       height: 50px;
@@ -27,17 +29,18 @@
     }
     header h1 {
       font-size: 24px;
-      color: #004080;
+      color: #4C1D95;
       margin: 0;
     }
     .hero {
       text-align: center;
-      padding: 30px 20px;
-      background-color: #F0FAFF;
+      padding: 40px 20px;
+      background-color: #E0E7FF;
+      animation: fadeIn 1s ease-in;
     }
     .hero h2 {
       font-size: 28px;
-      color: #004080;
+      color: #4C1D95;
     }
     .hero p {
       font-size: 16px;
@@ -45,9 +48,10 @@
     }
     .paket {
       padding: 20px;
+      animation: fadeIn 1s ease-in;
     }
     .paket h2 {
-      color: #004080;
+      color: #4C1D95;
       text-align: center;
     }
     .paket-list {
@@ -62,10 +66,14 @@
       border-radius: 10px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
       text-align: center;
+      transition: transform 0.3s ease;
+    }
+    .paket-item:hover {
+      transform: scale(1.05);
     }
     .paket-item h3 {
       margin: 0;
-      color: #007ACC;
+      color: #3B82F6;
     }
     .form-container {
       padding: 20px;
@@ -73,10 +81,11 @@
       margin: 30px 20px;
       border-radius: 10px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      animation: fadeIn 1s ease-in;
     }
     .form-container h2 {
       text-align: center;
-      color: #004080;
+      color: #4C1D95;
     }
     input, select, button {
       padding: 10px;
@@ -87,18 +96,26 @@
       font-size: 16px;
     }
     button {
-      background-color: #25D366;
+      background-color: #7C3AED;
       color: white;
       border: none;
       font-weight: bold;
       cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    button:hover {
+      background-color: #5B21B6;
     }
     footer {
-      background-color: #B3D9FF;
+      background-color: #A3BFFA;
       text-align: center;
       padding: 15px;
       font-size: 14px;
-      color: #004080;
+      color: #4C1D95;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
