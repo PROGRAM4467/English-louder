@@ -163,11 +163,17 @@
 
   <script>
     function kirimWhatsApp() {
-      const nama = document.getElementById('nama').value;
-      const kelas = document.getElementById('kelas').value;
+      const nama = document.getElementById('nama').value.trim();
+      const kelas = document.getElementById('kelas').value.trim();
       const paket = document.getElementById('paket').value;
+
+      if (!nama || !kelas || !paket) {
+        alert("Mohon isi semua data sebelum mengirim.");
+        return;
+      }
+
       const nomor = '62882003810023';
-      const pesan = `Halo! Saya ingin mendaftar les bahasa Inggris.\nNama: ${nama}\nKelas: ${kelas}\nPaket: ${paket}`;
+      const pesan = `Halo! Saya ingin mendaftar les bahasa Inggris.%0ANama: ${nama}%0AKelas: ${kelas}%0APaket: ${paket}`;
       const url = `https://wa.me/${nomor}?text=${encodeURIComponent(pesan)}`;
       window.open(url, '_blank');
     }
