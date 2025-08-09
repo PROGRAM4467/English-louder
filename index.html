@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Les Bahasa Inggris Anak</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background-color: #E6F2FF;
+      color: #333;
+    }
+    header {
+      background-color: #B3D9FF;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+    }
+    header img {
+      height: 50px;
+      margin-right: 15px;
+    }
+    header h1 {
+      font-size: 24px;
+      color: #004080;
+      margin: 0;
+    }
+    .hero {
+      text-align: center;
+      padding: 30px 20px;
+      background-color: #F0FAFF;
+    }
+    .hero h2 {
+      font-size: 28px;
+      color: #004080;
+    }
+    .hero p {
+      font-size: 16px;
+      margin-top: 10px;
+    }
+    .paket {
+      padding: 20px;
+    }
+    .paket h2 {
+      color: #004080;
+      text-align: center;
+    }
+    .paket-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+    .paket-item {
+      background-color: #FFF;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .paket-item h3 {
+      margin: 0;
+      color: #007ACC;
+    }
+    .form-container {
+      padding: 20px;
+      background-color: #FFF;
+      margin: 30px 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .form-container h2 {
+      text-align: center;
+      color: #004080;
+    }
+    input, select, button {
+      padding: 10px;
+      margin: 10px 0;
+      width: 100%;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+    button {
+      background-color: #25D366;
+      color: white;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    footer {
+      background-color: #B3D9FF;
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+      color: #004080;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="logo.png" alt="Logo Les">
+    <h1>Les Bahasa Inggris Anak</h1>
+  </header>
+
+  <section class="hero">
+    <h2>Belajar Bahasa Inggris Jadi Seru!</h2>
+    <p>Program les interaktif dan menyenangkan untuk anak-anak dari berbagai jenjang.</p>
+  </section>
+
+  <section class="paket">
+    <h2>Pilihan Paket</h2>
+    <div class="paket-list">
+      <div class="paket-item"><h3>Paket A</h3><p>Dasar (Basic)</p></div>
+      <div class="paket-item"><h3>Paket B</h3><p>Menengah (Intermediate)</p></div>
+      <div class="paket-item"><h3>Paket C</h3><p>Mahir (Advanced)</p></div>
+      <div class="paket-item"><h3>Paket D</h3><p>Conversation</p></div>
+      <div class="paket-item"><h3>Paket E</h3><p>Grammar Mastery</p></div>
+    </div>
+  </section>
+
+  <section class="form-container">
+    <h2>Formulir Pendaftaran</h2>
+    <input type="text" id="nama" placeholder="Nama lengkap">
+    <input type="text" id="kelas" placeholder="Kelas (misal: SD 4)">
+    <select id="paket">
+      <option value="">Pilih Paket</option>
+      <option value="Paket A">Paket A</option>
+      <option value="Paket B">Paket B</option>
+      <option value="Paket C">Paket C</option>
+      <option value="Paket D">Paket D</option>
+      <option value="Paket E">Paket E</option>
+    </select>
+    <button onclick="kirimWhatsApp()">Kirim via WhatsApp</button>
+  </section>
+
+  <footer>
+    &copy; 2025 Les Bahasa Inggris Anak | WhatsApp: +62 882-0038-10023
+  </footer>
+
+  <script>
+    function kirimWhatsApp() {
+      const nama = document.getElementById('nama').value;
+      const kelas = document.getElementById('kelas').value;
+      const paket = document.getElementById('paket').value;
+      const nomor = '62882003810023';
+      const pesan = `Halo! Saya ingin mendaftar les bahasa Inggris.\nNama: ${nama}\nKelas: ${kelas}\nPaket: ${paket}`;
+      const url = `https://wa.me/${nomor}?text=${encodeURIComponent(pesan)}`;
+      window.open(url, '_blank');
+    }
+  </script>
+
+</body>
+</html>
