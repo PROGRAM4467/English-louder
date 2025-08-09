@@ -2,182 +2,207 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Les Bahasa Inggris Anak</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JUSTHINK - Kursus Bahasa Inggris</title>
   <style>
-    * {
-      box-sizing: border-box;
-      scroll-behavior: smooth;
+    :root {
+      --primary: #4C1D95;
+      --accent: #A78BFA;
+      --light: #F3F4F6;
+      --dark: #1F2937;
     }
+
     body {
-      font-family: 'Poppins', sans-serif;
       margin: 0;
-      background-color: #EEF2FF;
-      color: #333;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--light);
+      color: var(--dark);
     }
+
     header {
-      background-color: #A3BFFA;
-      padding: 15px 20px;
+      background-color: var(--primary);
+      color: white;
+      padding: 20px;
       display: flex;
       align-items: center;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      justify-content: space-between;
     }
+
     header img {
       height: 50px;
-      margin-right: 15px;
     }
+
     header h1 {
-      font-size: 24px;
-      color: #4C1D95;
       margin: 0;
+      font-size: 1.8em;
     }
-    .hero {
-      text-align: center;
-      padding: 40px 20px;
-      background-color: #E0E7FF;
-      animation: fadeIn 1s ease-in;
+
+    main {
+      max-width: 900px;
+      margin: 30px auto;
+      background-color: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
-    .hero h2 {
-      font-size: 28px;
-      color: #4C1D95;
+
+    h2, h3 {
+      color: var(--primary);
+      margin-top: 40px;
     }
-    .hero p {
-      font-size: 16px;
-      margin-top: 10px;
-    }
-    .paket {
-      padding: 20px;
-      animation: fadeIn 1s ease-in;
-    }
-    .paket h2 {
-      color: #4C1D95;
-      text-align: center;
-    }
-    .paket-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 15px;
-      margin-top: 20px;
-    }
-    .paket-item {
-      background-color: #FFF;
-      padding: 15px;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      text-align: center;
-      transition: transform 0.3s ease;
-    }
-    .paket-item:hover {
-      transform: scale(1.05);
-    }
-    .paket-item h3 {
-      margin: 0;
-      color: #3B82F6;
-    }
-    .form-container {
-      padding: 20px;
-      background-color: #FFF;
-      margin: 30px 20px;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      animation: fadeIn 1s ease-in;
-    }
-    .form-container h2 {
-      text-align: center;
-      color: #4C1D95;
-    }
-    input, select, button {
-      padding: 10px;
-      margin: 10px 0;
+
+    table {
       width: 100%;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-      font-size: 16px;
+      border-collapse: collapse;
+      margin-top: 15px;
+      margin-bottom: 30px;
     }
-    button {
-      background-color: #7C3AED;
-      color: white;
-      border: none;
-      font-weight: bold;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
-    button:hover {
-      background-color: #5B21B6;
-    }
-    footer {
-      background-color: #A3BFFA;
+
+    th, td {
+      padding: 12px;
+      border: 1px solid #E5E7EB;
       text-align: center;
-      padding: 15px;
-      font-size: 14px;
-      color: #4C1D95;
     }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+
+    thead {
+      background-color: var(--accent);
+      color: var(--primary);
+    }
+
+    tbody tr:nth-child(even) {
+      background-color: #E0E7FF;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    ul li::before {
+      content: "✅ ";
+      color: #10B981;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      color: #6B7280;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      header img {
+        margin-bottom: 10px;
+      }
+
+      table, thead, tbody, th, td, tr {
+        display: block;
+        width: 100%;
+      }
+
+      th {
+        background-color: var(--light);
+        font-weight: bold;
+      }
+
+      td {
+        border: none;
+        border-bottom: 1px solid #E5E7EB;
+        text-align: left;
+      }
     }
   </style>
 </head>
 <body>
 
   <header>
-    <img src="logo.png" alt="Logo Les">
-    <h1>Les Bahasa Inggris Anak</h1>
+    <img src="logo.jpg" alt="Logo JUSTHINK">
+    <h1>JUSTHINK English Course</h1>
   </header>
 
-  <section class="hero">
-    <h2>Belajar Bahasa Inggris Jadi Seru!</h2>
-    <p>Program les interaktif dan menyenangkan untuk anak-anak dari berbagai jenjang.</p>
-  </section>
+  <main>
+    <p>Belajar Bahasa Inggris jadi lebih menyenangkan dan fleksibel! Pilih paket yang sesuai dan nikmati fasilitas terbaik dari tutor berpengalaman.</p>
 
-  <section class="paket">
-    <h2>Pilihan Paket</h2>
-    <div class="paket-list">
-      <div class="paket-item"><h3>Paket A</h3><p>Dasar (Basic)</p></div>
-      <div class="paket-item"><h3>Paket B</h3><p>Menengah (Intermediate)</p></div>
-      <div class="paket-item"><h3>Paket C</h3><p>Mahir (Advanced)</p></div>
-      <div class="paket-item"><h3>Paket D</h3><p>Conversation</p></div>
-      <div class="paket-item"><h3>Paket E</h3><p>Grammar Mastery</p></div>
-    </div>
-  </section>
+    <h2>💬 Private per Meeting</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Jenis Kursus</th>
+          <th>1 Siswa</th>
+          <th>2 Siswa</th>
+          <th>3 Siswa</th>
+          <th>4 Siswa</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Offline Private</td>
+          <td>Rp 60.000</td>
+          <td>Rp 90.000</td>
+          <td>Rp 120.000</td>
+          <td>Rp 150.000</td>
+        </tr>
+        <tr>
+          <td>Online Private</td>
+          <td>Rp 55.000</td>
+          <td>Rp 85.000</td>
+          <td>Rp 115.000</td>
+          <td>Rp 130.000</td>
+        </tr>
+      </tbody>
+    </table>
 
-  <section class="form-container">
-    <h2>Formulir Pendaftaran</h2>
-    <input type="text" id="nama" placeholder="Nama lengkap">
-    <input type="text" id="kelas" placeholder="Kelas (misal: SD 4)">
-    <select id="paket">
-      <option value="">Pilih Paket</option>
-      <option value="Paket A">Paket A</option>
-      <option value="Paket B">Paket B</option>
-      <option value="Paket C">Paket C</option>
-      <option value="Paket D">Paket D</option>
-      <option value="Paket E">Paket E</option>
-    </select>
-    <button onclick="kirimWhatsApp()">Kirim via WhatsApp</button>
-  </section>
+    <h2>📦 Bundling Kelas Rutin (4x Meeting/Bulan)</h2>
+    <table>
+      <thead style="background-color: #A3BFFA; color: #004080;">
+        <tr>
+          <th>Jenis Kursus</th>
+          <th>1 Siswa</th>
+          <th>2 Siswa</th>
+          <th>3 Siswa</th>
+          <th>4 Siswa</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Offline Private</td>
+          <td>Rp 228.000</td>
+          <td>Rp 350.000</td>
+          <td>Rp 450.000</td>
+          <td>Rp 500.000</td>
+        </tr>
+        <tr>
+          <td>Online Private</td>
+          <td>Rp 215.000</td>
+          <td>Rp 320.000</td>
+          <td>Rp 440.000</td>
+          <td>Rp 480.000</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>🎁 Fasilitas Kursus</h2>
+    <ul>
+      <li>Bimbingan privat 60–90 menit/meeting</li>
+      <li>Tutor bersertifikat TOEFL 550+ dan berpengalaman</li>
+      <li>Tutor datang ke rumah (maks 7 km untuk offline)</li>
+      <li>Bebas pilih jam belajar</li>
+      <li>Latihan + Praktik langsung</li>
+    </ul>
+  </main>
 
   <footer>
-    &copy; 2025 Les Bahasa Inggris Anak | WhatsApp: +62 882-0038-10023
+    &copy; 2025 JUSTHINK. Semua hak dilindungi.
   </footer>
-
-  <script>
-    function kirimWhatsApp() {
-      const nama = document.getElementById('nama').value.trim();
-      const kelas = document.getElementById('kelas').value.trim();
-      const paket = document.getElementById('paket').value;
-
-      if (!nama || !kelas || !paket) {
-        alert("Mohon isi semua data sebelum mengirim.");
-        return;
-      }
-
-      const nomor = '62882003810023';
-      const pesan = `Halo! Saya ingin mendaftar les bahasa Inggris.%0ANama: ${nama}%0AKelas: ${kelas}%0APaket: ${paket}`;
-      const url = `https://wa.me/${nomor}?text=${encodeURIComponent(pesan)}`;
-      window.open(url, '_blank');
-    }
-  </script>
 
 </body>
 </html>
